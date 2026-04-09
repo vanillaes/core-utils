@@ -1,0 +1,34 @@
+{
+  "name": "@vanillaes/core-utils",
+  "version": "0.0.0",
+  "description": "Cross-Platform POSIX core-utils",
+  "keywords": [
+    "ecmascript",
+    "esm",
+    "esmodules",
+    "cli",
+    "developer-tools",
+    "posix",
+    "core-utils",
+    "cp",
+    "rm",
+    ""
+  ],
+  "repository": "https://github.com/vanillaes/core-utils",
+  "author": "Evan Plaice <evanplaice@gmail.com> (https://evanplaice.com)",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "esmtk test",
+    "lint": "esmtk lint",
+    "type": "esmtk type",
+    "typings": "esmtk typings",
+    "clean": "esmtk clean --typings",
+    "preview": "esmtk preview",
+    "preversion": "npm run test && npm run lint && npm run type",
+    "postversion": "git push --follow-tags"
+  }
+}
