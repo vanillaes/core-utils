@@ -34,5 +34,8 @@
   "dependencies": {
     "@vanillaes/esmtk": "^1.8.4",
     "commander": "^14.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0"
   }
 }
