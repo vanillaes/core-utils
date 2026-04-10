@@ -1,4 +1,4 @@
-import { fileExists } from '@vanillaes/esmtk'
+import { exists } from '@vanillaes/esmtk'
 import { basename, sep } from 'node:path'
 import { cp, stat } from 'node:fs/promises'
 
@@ -9,7 +9,7 @@ import { cp, stat } from 'node:fs/promises'
  * @param {boolean} force If the file already exists, overwrite it (default false)
  */
 export async function copyAsync (source, target, force = false) {
-  const sExists = await fileExists(source)
+  const sExists = await exists(source)
   if (!sExists) {
     console.error(`cp: ${source} No such file or directory`)
     process.exitCode = 1
@@ -27,7 +27,7 @@ export async function copyAsync (source, target, force = false) {
     return
   }
 
-  const tExists = await fileExists(target)
+  const tExists = await exists(target)
   const tIsDir = target.endsWith(sep)
   // copy file-to-directory
   if (tIsDir) {
@@ -68,7 +68,7 @@ export async function copyAsync (source, target, force = false) {
  * @param {boolean} force If the file already exists, overwrite it (default false)
  */
 export async function copyMultipleAsync (sources, target, force = false) {
-  const tExists = await fileExists(target)
+  const tExists = await exists(target)
   if (!tExists) {
     console.error(`cp: ${target} No such file or directory`)
     process.exitCode = 1
@@ -103,7 +103,7 @@ export async function copyMultipleAsync (sources, target, force = false) {
  * @param {boolean} force If the file already exists, overwrite it (default false)
  */
 export async function copyRecursiveAsync (source, target, force = false) {
-  const sExists = await fileExists(source)
+  const sExists = await exists(source)
   if (!sExists) {
     console.error(`cp: ${source} No such file or directory`)
     process.exitCode = 1
@@ -116,7 +116,7 @@ export async function copyRecursiveAsync (source, target, force = false) {
     return
   }
 
-  const tExists = await fileExists(target)
+  const tExists = await exists(target)
   if (!tExists) {
     console.error(`cp: ${target} No such file or directory`)
     process.exitCode = 1

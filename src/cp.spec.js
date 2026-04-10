@@ -1,5 +1,5 @@
 import { filesλobjects, setup, teardown, test } from './__tests__/test.js'
-import { copyAsync, copyMultipleAsync, copyRecursiveAsync } from '@vanillaes/esmtk'
+import { copyAsync, copyMultipleAsync, copyRecursiveAsync } from '@vanillaes/core-utils'
 import { rmSync } from 'node:fs'
 
 import { createRequire } from 'module'

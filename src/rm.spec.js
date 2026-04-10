@@ -1,5 +1,5 @@
 import { filesλobjects, setup, teardown, test } from './__tests__/test.js'
-import { removeAsync, removeMultipleAsync, removeRecursiveAsync } from '@vanillaes/esmtk'
+import { removeAsync, removeMultipleAsync, removeRecursiveAsync } from '@vanillaes/core-utils'
 import { rmSync } from 'node:fs'
 
 import { createRequire } from 'module'

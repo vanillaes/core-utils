@@ -1,5 +1,5 @@
 import { setup, teardown, test } from './__tests__/test.js'
-import { expand } from '@vanillaes/esmtk'
+import { expand } from './index.js'
 import { rmSync } from 'node:fs'
 
 import { createRequire } from 'module'

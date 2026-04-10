@@ -1,4 +1,4 @@
-import { fileExists } from '@vanillaes/esmtk'
+import { exists } from '@vanillaes/esmtk'
 import { rm, stat } from 'node:fs/promises'
 
 /**
@@ -7,8 +7,8 @@ import { rm, stat } from 'node:fs/promises'
  * @param {boolean} force Ignore exceptions if the file doesn't exist (default false)
  */
 export async function removeAsync (path, force = false) {
-  const exists = await fileExists(path)
-  if (!exists) {
+  const pExists = await exists(path)
+  if (!pExists) {
     console.error(`rm: ${path} No such file or directory`)
     process.exitCode = 1
     return
@@ -63,8 +63,8 @@ export async function removeMultipleAsync (files, force = false) {
  * @param {boolean} force Ignore exceptions if the file|directory doesn't exist (default false)
  */
 export async function removeRecursiveAsync (path, force = false) {
-  const exists = await fileExists(path)
-  if (!exists) {
+  const pExists = await exists(path)
+  if (!pExists) {
     console.error(`rm: ${path} No such file or directory`)
     process.exitCode = 1
     return

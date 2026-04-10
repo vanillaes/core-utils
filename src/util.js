@@ -1,4 +1,4 @@
-import { fileExists, match } from '@vanillaes/esmtk'
+import { exists, match } from '@vanillaes/esmtk'
 
 /**
  * Expand file/glob into a list of paths
@@ -16,8 +16,8 @@ export async function expand (source) {
     }
     return paths
   } else {
-    const exists = await fileExists(source)
-    if (!exists) {
+    const sExists = await exists(source)
+    if (!sExists) {
       console.error(`${source} No such file or directory`)
       process.exitCode = 1
       return []
