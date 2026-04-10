@@ -1,0 +1,281 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Copy Version",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["--version"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyFileToFile",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/cp1/test1.txt", "./test/cp2/test1.txt"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyFileToFile - Error source doesn't exist",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/cp1/testx.txt", "./test/cp2/"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyFileToFile - Error source is a directory",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/cp1/", "./test/cp2/test1.txt"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyFileToFile - Error target directory doesn't exist",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/cp1/test1.txt", "./test/cpx/"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyFileToDirectory",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/cp1/test1.txt", "./test/cp2/test1.txt"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyGlobToDirectory",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/cp1/*.js", "./test/cp2/"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyMultipleFiles",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/cp1/test1.txt", "./test/cp1/test1.js", "./test/cp1/test2.txt", "./test/cp1/test2.js", "./test/cp2/"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyMultipleFiles - Error file doesn't exist",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/cp1/test1.ts", "./test/cp1/test1.js", "./test/cp1/test2.txt", "./test/cp1/test2.js", "./test/cp2/"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyMultipleGlobs",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/cp1/*.txt", "./test/cp1/*.js", "./test/cp2/"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyMultipleGlobs - Error glob not found",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/cp1/*.ts", "./test/cp1/*.js", "./test/cp2/"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyMultipleMixed",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/cp1/test1.txt", "./test/cp1/test2.txt", "./test/cp1/*.js", "./test/cp2/"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "CopyDirectoryRecursively",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/cp-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["-r", "./test/cp1/", "./test/cp2"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Remove Version",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/rm-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["--version"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RemoveFile",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/rm-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/rm/test1.txt"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RemoveFile - Error file is a directory",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/rm-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/rm/"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RemoveGlob",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/rm-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/rm/*.js"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RemoveGlob - Error glob not found",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/rm-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/rm/*.ts"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RemoveDirectory",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/rm-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["-r", "./test/rm/"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RemoveMultipleFiles",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/rm-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/rm/test1.txt", "./test/rm/test2.js"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RemoveMultipleGlobs",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/rm-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/rm/*.txt", "./test/rm/*.js"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RemoveMultipleGlobs - Error glob not found",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/rm-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/rm/*.txt", "./test/rm/*.ts"],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "RemoveMultipleMixed",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/bin/rm-es.js",
+            "cwd": "${workspaceFolder}",
+            "args": ["./test/rm/test1.txt", "./test/rm/*.js"],
+            "console": "integratedTerminal",
+        }
+    ]
+}

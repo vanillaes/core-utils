@@ -1,7 +1,7 @@
 {
   "name": "@vanillaes/core-utils",
   "version": "0.0.0",
-  "description": "Cross-Platform POSIX core-utils",
+  "description": "Cross-Platform POSIX core-utils in JavaScript",
   "keywords": [
     "ecmascript",
     "esm",
@@ -18,14 +18,29 @@
   "author": "Evan Plaice <evanplaice@gmail.com> (https://evanplaice.com)",
   "license": "MIT",
   "type": "module",
+  "bin": {
+    "cp-es": "bin/cp-es.js",
+    "rm-es": "bin/rm-es.js"
+  },
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts"
+    },
+    "./cp": {
+      "import": "./src/cp.js",
+      "types": "./src/cp.d.ts"
+    },
+    "./rm": {
+      "import": "./src/rm.js",
+      "types": "./src/rm.d.ts"
+    }
   },
   "scripts": {
     "test": "esmtk test",
     "lint": "esmtk lint",
-    "type": "esmtk type",
-    "typings": "esmtk typings",
+    "type": "esmtk type --types node",
+    "typings": "esmtk typings --types node",
     "clean": "esmtk clean --typings",
     "preview": "esmtk preview",
     "preversion": "npm run test && npm run lint && npm run type",
@@ -37,5 +52,10 @@
   },
   "devDependencies": {
     "@types/node": "^25.6.0"
+  },
+  "lint": {
+    "ignore": [
+      "**/__tests__/**"
+    ]
   }
 }
