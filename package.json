@@ -1,6 +1,6 @@
 {
   "name": "@vanillaes/core-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cross-Platform POSIX core-utils in JavaScript",
   "keywords": [
     "ecmascript",
