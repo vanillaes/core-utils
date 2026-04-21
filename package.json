@@ -40,14 +40,14 @@
     "test": "esmtk test",
     "lint": "esmtk lint",
     "type": "esmtk type --types node",
-    "typings": "esmtk typings --types node",
+    "build": "esmtk typings --types node",
     "clean": "esmtk clean --typings",
     "preview": "esmtk preview",
     "preversion": "npm run test && npm run lint && npm run type",
     "postversion": "git push --follow-tags"
   },
   "dependencies": {
-    "@vanillaes/esmtk": "^2.0.0",
+    "@vanillaes/esmtk": "^2.5.0",
     "commander": "^14.0.3"
   },
   "devDependencies": {

@@ -8,7 +8,7 @@ import { exists, match } from '@vanillaes/esmtk'
 export async function expand (source) {
   const isGlob = source.includes('*')
   if (isGlob) {
-    const paths = await match(source)
+    const paths = await match(source, process.cwd(), '', true)
     if (paths.length === 0) {
       console.error(`${source} no matches found`)
       process.exitCode = 1
