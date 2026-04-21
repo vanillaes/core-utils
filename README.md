@@ -6,8 +6,9 @@
 
 <div align="center">
   <a href="https://github.com/vanillaes/core-utils/releases"><img src="https://badgen.net/github/tag/vanillaes/core-utils?cache-control=no-cache" alt="GitHub Release"></a>
-  <a href="https://www.npmjs.com/package/@vanillaes/core-utils"><img src="https://badgen.net/npm/v/@vanillaes/core-utils?icon=npm" alt="NPM Version"></a>
-  <a href="https://www.npmjs.com/package/@vanillaes/core-utils"><img src="https://badgen.net/npm/dm/@vanillaes/core-utils?icon=npm" alt="NPM Downloads"></a>
+  <a href="https://npmjs.com/package/@vanillaes/core-utils"><img src="https://badgen.net/npm/dw/@vanillaes/core-utils?icon=npm" alt="NPM Weekly Downloads"></a>
+  <a href="https://jsr.io/@vanillaes/core-utils"><img src="https://jsr.io/badges/@vanillaes/core-utils/weekly-downloads" alt="JSR Weekly Downloads"></a>
+  <a href="https://jsr.io/@vanillaes/core-utils"><img src="https://jsr.io/badges/@vanillaes/core-utils/score" alt="JSR Score"></a>
   <a href="https://github.com/vanillaes/core-utils/actions"><img src="https://github.com/vanillaes/core-utils/workflows/Latest/badge.svg" alt="Latest Status"></a>
   <a href="https://github.com/vanillaes/core-utils/actions"><img src="https://github.com/vanillaes/core-utils/workflows/Release/badge.svg" alt="Release Status"></a>
 </div>

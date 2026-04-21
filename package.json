@@ -44,6 +44,7 @@
     "clean": "esmtk clean --typings",
     "preview": "esmtk preview",
     "preversion": "npm run test && npm run lint && npm run type",
+    "version": "npm run clean && npm run build && git add **/*.d.ts",
     "postversion": "git push --follow-tags"
   },
   "dependencies": {
